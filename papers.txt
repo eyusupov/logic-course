@@ -1,0 +1,59 @@
+Foundations of mathematics:
+- Grassmann, Hermann, 1861, Lehrbuch Der Arithmetik Für Höhere Lehranstalten
+- Peirce, C. S., "On the Logic of Number", 1881
+- Dedekind, Richard, "Was Sind Und Was Sollen Die Zahlen?", 1888
+- Peano "Arithmetices Principia, Nova Methodo Exposita" ("The principles of arithmetic presented by a new method") 1889
+- Hilbert "Mathematische Probleme. Vortrag, Gehalten Auf Dem Internationalen Mathematiker-Congress Zu Paris 1900" ("Mathematical Problems") 1900
+- Hilbert "Über Die Grundlagen Der Logik Und Der Arithmetik", "On the foundations of logic and and arithmetic" 1905
+- Russel & Whitehead "Principia Mathematica" 1910
+- Zermelo 1908
+- Fraenkel 1921
+- Fraenkel 1922
+- Skolem 1922
+- Herbrand "Les Bases de la Logique Hilbertienne", 1930
+- Gödel "Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme, I" (On Formally Undecidable Propositions of Principia Mathematica and Related Systems I), 1931
+- Herbrand "Sur La Non-Contradiction de l’Arithmétique.", 1932
+- Church, Alonzo (1932). "A set of postulates for the foundation of logic"
+
+Computability theory:
+- Hilbert, David; Ackermann, Wilhelm (1928). Grundzüge der theoretischen Logik [Principles of mathematical logic]
+- Turing "On Computable Numbers, with an application to the Entscheidungsproblem" 1937
+
+Model theory:
+- Löwenheim 1915
+- Skölem 1920, 1922
+- Tarski 1926-1928
+
+Theorem proving:
+- Julia Robinson "Definability and decision problems" in arithmetic Jun 1949
+- Davis & Putnam "A Computing Procedure for Quantification Theory" 10.1145/321033.321034 Jul 1960
+- J. A. Robinson "Theorem-Proving on the Computer" Apr 1963
+- J. A. Robinson "A Machine-Oriented Logic Based on the Resolution Principle" Jan 1965
+
+Prolog:
+- Kowalski
+- Van Emden
+
+Negation:
+- Clark
+- Apt
+- Shepherdson
+- Gottlob
+
+Ontology & Knowledge Representation:
+- Smith
+- Sowa
+- Berners-Lee
+
+Hilbert's Tenth Problem:
+- Davis & Putnam
+- Julia Robinson
+- Matiyasevich
+
+Constraint Logic Programming:
+
+Other:
+- Kleene
+- Scott
+- Carnap
+- Post
