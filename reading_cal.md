@@ -22,21 +22,21 @@ Core Objective: Master the absolute abstraction wall between syntax and semantic
 - Core Concepts: Inductive generation definitions of formulas; Object-language alphabet variables (пропозициональные буквы) versus meta-variables (метапеременные); Constructing logic grammar in memory using functional variants.
 - Historical Blueprint: Structural foundation cleaning of Hermann Grassmann (1861).
 
-## 🔹 Week 2: Semantics and Truth Foundations
+## 🔹 Week 2: Grammars, Parsing Engines, and Inductive Rules
 
 - Required Reading:
-  - [END] Chapter 1.2 (Truth Assignments) & Chapter 1.4 (Induction and Recursion).
-  - [HAR] Chapter 2.1 to 2.3 (Syntax/Semantics of propositional logic, Validity, satisfiability, tautology).
-- Core Concepts: Truth assignment functions (истинностное означивание); The Principle of Structural Induction; Proving meta-theorems about valuations recursively; Mathematical definitions of validity, satisfiability, and tautology (тождественно истинные формулы).
-- Historical Blueprint: Early algebraic foundations of Boolean functions and the semantic truth models of Alfred Tarski.
+  - [END] Chapter 1.4 (Induction and Recursion).
+  - [HAR] Chapter 1.7 (Parsing).
+- Core Concepts: General Chomsky Type 2 (Context-Free) Grammars; Programming an LL(1) Recursive Descent Parser in OCaml; Defining mathematical induction and recursion over abstract string architectures.
+- Historical Blueprint: Noam Chomsky's (1956) Context-Free Language Grammars. This week isolates pure parser mechanics—how a computer safely steps through text, processes strings, and manages lookahead boundaries before it applies any logic meanings.
 
-## 🔹 Week 3: Parsing Engines and Normal Forms
+## 🔹 Week 3: Propositional Mathematics, Truth, and Normal Forms
 
 - Required Reading:
-  - [END] Chapter 1.3 (A Parsing Algorithm) & Chapter 1.5 (Sentential Connectives).
-  - [HAR] Chapter 1.7 (Parsing) & Chapter 2.5, 2.6 (NNF, DNF, CNF).
-- Core Concepts: Deterministic tree-structure construction; Mathematical proofs of Unique Readability; Designing an LL(1) recursive descent parser in code; Converting parsed abstract syntax trees into Negation Normal Form (NNF) and Conjunctive Normal Form (CNF).
-- Historical Blueprint: The formalization of Context-Free Grammars (Chomsky Type 2) and their reduction to algorithmic compiler tokenizers.
+  - [END] Chapter 1.2 (Truth Assignments), Chapter 1.3 (A Parsing Algorithm), & Chapter 1.5 (Sentential Connectives).
+  - [HAR] Chapter 2.1 to 2.3 (Syntax/Semantics of propositional logic, Validity, satisfiability, tautology) & Chapter 2.5, 2.6 (NNF, DNF, CNF).
+- Core Concepts: Truth assignment mappings (истинностное означивание); Functional valuation functions; Tautologies (тождественно истинные формулы); Mathematical proofs of Unique Readability; Hooking your Week 2 parser up to map strings directly into proposition syntax trees; Converting logic arguments into Negation Normal Form (NNF) and Conjunctive Normal Form (CNF).
+- Historical Blueprint: Emil Post's (1921) introduction of Truth Tables and Alfred Tarski's truth models. You take the general text parser you built last week and use it to execute actual propositional semantics and algebraic normal form translations.
 
 ## 🔹 Week 4: The Core SAT Solver (DPLL) & Compactness
 
@@ -45,12 +45,6 @@ Core Objective: Master the absolute abstraction wall between syntax and semantic
   - [HAR] Chapter 2.9 (The Davis–Putnam procedure) & Chapter 2.12 (Compactness).
 - Core Concepts: The DPLL Algorithm loop architecture; Clause manipulation and search-tree branch trimming; The Mathematical Compactness Theorem for propositional variables.
 - Historical Blueprint: Davis & Putnam (1960).
-
----
-
-## 📅 PHASE 2: First-Order Logic, Model Theory, and Resolution (Weeks 5–8)
-
-Core Objective: Expand your logic language to capture variables and infinity quantifiers, evaluate structural truth universes, and engineer general automated theorem proving.
 
 ## 🔹 Week 5: Quantifiers, Truth, and Models
 
