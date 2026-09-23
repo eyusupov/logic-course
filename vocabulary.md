@@ -47,5 +47,10 @@ sentential connective — пропозициональная связка (ло�
 sentence symbol - пропозициональные переменные (символы высказываний)
 conditional symbol - символ импликации
 biconditional symbol - символ эквивалентности
+formula building operation - операция построения формулы
 construction sequence - последовательность построения (вывод формулы, конструктивная последовательность)
 ordinary strong numerical induction — обычная сильная числовая индукция
+
+# Section 1.2
+
+truth assignment - оценка истинности (означивание)
