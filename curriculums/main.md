@@ -7,6 +7,8 @@
 - [SØR] Morten Heine Sørensen & Paweł Urzyczyn, Lectures on the Curry-Howard Isomorphism
 - [LLY] J. W. Lloyd, Foundations of Logic Programming
 - [ULL] Jeffrey D. Ullman, Principles of Database & Knowledge-Base Systems (Vols. 1 & 2)
+- [TAPL] Benjamin C. Pierce, Types and Programming Languages
+- [ATTAPL] Benjamin C. Pierce, Advanced Topics in Types and Programming Languages
 
 ---
 
@@ -107,6 +109,7 @@ Core Objective: Dive directly into the historic limits of mathematical certainty
   - [END] Chapter 3.6 (Recursive Functions).
   - [SØR] Chapters 1 & 2 (Untyped λ-calculus & Substitution).
   - [HAR] Chapter 7.6 (Church’s theorem).
+  - [TAPL] Chapters 5, 6 & 7 (Untyped λ-calculus)
 - Core Concepts: Unpacking the Chomsky Hierarchy Type 0 boundaries; Proving the Church-Turing Thesis; Computation modeled as functional substitution via β-reduction; Coding recursion loops with the Y Combinator.
 - Historical Blueprint: Alan Turing (1937) and Alonzo Church (1932).
 
@@ -115,6 +118,7 @@ Core Objective: Dive directly into the historic limits of mathematical certainty
 - Required Reading:
   - [END] Chapter 4.1 (Second-Order Languages) & Chapter 4.2 (Skolem Functions).
   - [SØR] Chapters 3 & 4 (Simply Typed λ-calculus & The Curry-Howard Isomorphism).
+  - [TAPL] Chapters 8, 9 & 11 (Simply Typed λ-Calculus, type safety proofs (Progress and Preservation), and basic types)
 - Core Concepts: Intuitionistic Logic rules; Rejecting the law of the excluded middle; Bridging proof systems directly to program structures: Propositions-as-Types and Proofs-as-Programs.
 
 ---
@@ -134,6 +138,7 @@ Core Objective: Map everything you have learned to enterprise computational tool
 
 - Required Reading:
   - [SØR] Chapter 8 (The Barendregt Cube) & Chapter 11 (Dependent Types).
+  - [ATTAPL] Chapter 2 (Dependent Types)
 - Core Concepts: Calculus of Inductive Constructions; Engineering type parameters dependent directly on localized values; Creating the architecture of a Trusted Kernel for interactive proof assistants.
 
 ## 🔹 Week 15: Restricting Logic for Software & Storage Databases
