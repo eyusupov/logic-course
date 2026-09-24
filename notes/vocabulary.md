@@ -54,3 +54,13 @@ ordinary strong numerical induction — обычная сильная число
 # Section 1.2
 
 truth assignment - оценка истинности (означивание)
+truth values - истинностные (логические) значения
+extension - продолжение
+truth assignment extension - продолжение оценки истинности (продолжение означивания)
+satisfy - удовлетворять
+vacously true - тривиально верно
+hypotheses - посылки (гипотезы)
+conclusion - заключение
+tautologically implies - тавтологически следует (логически следует)
+tautologically equivalent - логически эквивалентные (равносильные, тавтологически эквивалентные
+compactness theorem - теорема о компактности (теоремa Мальцева)
