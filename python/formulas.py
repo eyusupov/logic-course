@@ -284,3 +284,76 @@ def print_qformula(afn_printer: Callable[[int, T], str], fm: Formula[T]) -> None
     """The final interface function matching 'print_qformula pfn fm'."""
     formula_str = format_formula(afn_printer, 0, fm)
     print(f"<<{formula_str}>>")
+
+
+U = TypeVar("U")
+
+
+def onatoms(f: Callable[[T], Formula[U]], fm: Formula[T]) -> Formula[U]:
+    """
+    Applies function f to every Atom leaf, returning a brand new formula structure.
+    Useful for renaming variables or substitution.
+    """
+    match fm:
+        case Atom(a):
+            return f(a)
+        case Not(p):
+            return Not(onatoms(f, p))
+        case And(p, q):
+            return And(onatoms(f, p), onatoms(f, q))
+        case Or(p, q):
+            return Or(onatoms(f, p), onatoms(f, q))
+        case Imp(p, q):
+            return Imp(onatoms(f, p), onatoms(f, q))
+        case Iff(p, q):
+            return Iff(onatoms(f, p), onatoms(f, q))
+        case Forall(x, p):
+            return Forall(x, onatoms(f, p))
+        case Exists(x, p):
+            return Exists(x, onatoms(f, p))
+        case _:
+            # Safe fallthrough for _True() and _False() constants
+            return fm
+
+
+def overatoms(f: Callable[[T, Any], Any], fm: Formula[T], b: Any) -> Any:
+    """
+    Folds/iterates over every Atom leaf inside a formula structure,
+    accumulating a single state 'b'.
+    """
+    match fm:
+        case Atom(a):
+            return f(a, b)
+        case Not(p) | Forall(_, p) | Exists(_, p):
+            return overatoms(f, p, b)
+        case And(p, q) | Or(p, q) | Imp(p, q) | Iff(p, q):
+            # Evaluates the right child first, then pipes the state into the left child
+            return overatoms(f, p, overatoms(f, q, b))
+        case _:
+            return b
+
+
+# ------------------------------------------------------------------------- #
+# 3. Special case of a union of the results of a function over the atoms    #
+# ------------------------------------------------------------------------- #
+def atom_union(f: Callable[[T], list], fm: Formula[T]) -> list:
+    """
+    Gathers list attributes from all atoms, combines them, and deduplicates.
+    In Python, we implement setify natively by filtering duplicates or using unique keys.
+    """
+    # Mimics: overatoms (fun h t -> f(h)@t) fm []
+    # h = head element (current atom value), t = tail accumulator list
+    accumulator_func = lambda h, t: f(h) + t
+    raw_list = overatoms(accumulator_func, fm, [])
+
+    # Replicates Harrison's 'setify' to ensure unique items while keeping a list type
+    seen = set()
+    return [x for x in raw_list if not (x in seen or seen.add(x))]
+
+
+# ------------------------------------------------------------------------- #
+# 4. Final signature integration matching the book                         #
+# ------------------------------------------------------------------------- #
+def atoms(fm: Formula[T]) -> list[T]:
+    """Extracts all unique atomic variables inside a list format wrapper."""
+    return atom_union(lambda a: [a], fm)

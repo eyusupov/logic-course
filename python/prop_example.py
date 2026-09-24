@@ -20,3 +20,6 @@ print_prop_formula(parsed_ast)
 
 eval_ = eval_formula(parsed_ast, {P("p"): True, P("q"): True, P("r"): True})
 print(f"5. Eval result:      {eval_}")
+
+atoms_ = atoms(parsed_ast)
+print(f"6. Atoms:            {atoms_}")
