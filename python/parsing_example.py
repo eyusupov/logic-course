@@ -1,4 +1,4 @@
-from prop import parse_prop_formula, print_prop_formula, P
+from prop import parse_prop_formula, print_prop_formula, P, eval_formula
 from syntax import lex
 
 
@@ -17,3 +17,6 @@ print(f"3. Generated AST:    {parsed_ast}")
 # Pass the AST to the printer interface
 print("4. Final Printout:   ", end="")
 print_prop_formula(parsed_ast)
+
+eval_ = eval_formula(parsed_ast, {P("p"): True, P("q"): True, P("r"): True})
+print(f"5. Eval result:      {eval_}")
