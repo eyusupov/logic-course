@@ -1,6 +1,19 @@
 from dataclasses import dataclass
-from typing import Callable, Any
-from syntax import parse_formula, Atom
+from typing import Callable, Any, Union
+from syntax import (
+    parse_formula,
+    T,
+    _True,
+    _False,
+    Atom,
+    And,
+    Or,
+    Not,
+    Imp,
+    Iff,
+    Formula,
+    print_qformula,
+)
 
 
 # Assuming P is a wrapper class or just a string constructor for the atom value
@@ -46,7 +59,56 @@ def make_parser(
 def parse_prop_formula(inp: list[str]) -> Formula[P]:
     # We pass None for ifn instead of an exception-throwing lambda,
     # and we pass an empty list [] for vs (bound variables)
-    parser_closure = lambda tokens: parse_formula(
-        ifn=None, afn=parse_propvar, vs=[], inp=tokens
-    )
+    def parser_closure(tokens: list[str]) -> tuple[Formula, list[str]]:
+        return parse_formula(ifn=None, afn=parse_propvar, vs=[], inp=tokens)
+
     return make_parser(parser_closure)(inp)
+
+
+# Interpretation of formulas
+def eval_formula(fm: Formula[T], v: Union[Callable[[T], bool], dict[T, bool]]) -> bool:
+    """
+    Evaluates the truth value of a propositional formula given a valuation function or dict v.
+    """
+
+    # Helper to resolve atom values safely whether 'v' is a dict or a function
+    def get_valuation(atom_val: T) -> bool:
+        if isinstance(v, dict):
+            return v[atom_val]
+        return v(atom_val)
+
+    match fm:
+        case _False():
+            return False
+
+        case _True():
+            return True
+
+        case Atom(value):
+            return get_valuation(value)
+
+        case Not(p):
+            return not eval_formula(p, v)
+
+        case And(p, q):
+            return eval_formula(p, v) and eval_formula(q, v)
+
+        case Or(p, q):
+            return eval_formula(p, v) or eval_formula(q, v)
+
+        case Imp(p, q):
+            return (not eval_formula(p, v)) or eval_formula(q, v)
+
+        case Iff(p, q):
+            return eval_formula(p, v) == eval_formula(q, v)
+
+        case _:
+            raise TypeError(f"Cannot evaluate non-propositional formula node: {fm}")
+
+
+def print_propvar(_: int, p: P) -> str:
+    return p.name
+
+
+def print_prop_formula(fm: Formula[P]) -> None:
+    print_qformula(print_propvar, fm)

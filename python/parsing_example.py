@@ -1,11 +1,5 @@
-from prop import parse_prop_formula, P
-from syntax import lex, print_qformula
-
-
-# coding: utf-8
-# Define our propositional atom printer matching our P object structure
-def custom_p_printer(pr: int, p_obj: P) -> str:
-    return p_obj.name
+from prop import parse_prop_formula, print_prop_formula, P
+from syntax import lex
 
 
 # A valid propositional syntax string
@@ -22,4 +16,4 @@ print(f"3. Generated AST:    {parsed_ast}")
 
 # Pass the AST to the printer interface
 print("4. Final Printout:   ", end="")
-print_qformula(custom_p_printer, parsed_ast)
+print_prop_formula(parsed_ast)

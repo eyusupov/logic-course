@@ -149,7 +149,12 @@ def parse_atomic_formula(
 
 
 def parse_quant(
-    ifn: Callable, afn: Callable, vs: list[str], qcon: Callable, x: str, inp: list[str]
+    ifn: Optional[Callable[[list[str], list[str]], tuple[Formula, list[str]]]],
+    afn: Callable[[list[str], list[str]], tuple[Formula, list[str]]],
+    vs: list[str],
+    qcon: Callable,
+    x: str,
+    inp: list[str],
 ) -> tuple[Formula, list[str]]:
     match inp:
         case []:
@@ -160,10 +165,15 @@ def parse_quant(
                 return qcon(x, ast), final_rest
             else:
                 return parse_quant(ifn, afn, [y] + vs, qcon, y, rest)
+        case _:
+            raise ValueError("Invalid input passed")
 
 
 def parse_formula(
-    ifn: Callable, afn: Callable, vs: list[str], inp: list[str]
+    ifn: Optional[Callable[[list[str], list[str]], tuple[Formula, list[str]]]],
+    afn: Callable[[list[str], list[str]], tuple[Formula, list[str]]],
+    vs: list[str],
+    inp: list[str],
 ) -> tuple[Formula, list[str]]:
     # Clearer functional abstraction with flat argument chains
     def parse_layer1(i):
