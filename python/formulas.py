@@ -351,9 +351,6 @@ def atom_union(f: Callable[[T], list], fm: Formula[T]) -> list:
     return [x for x in raw_list if not (x in seen or seen.add(x))]
 
 
-# ------------------------------------------------------------------------- #
-# 4. Final signature integration matching the book                         #
-# ------------------------------------------------------------------------- #
 def atoms(fm: Formula[T]) -> list[T]:
     """Extracts all unique atomic variables inside a list format wrapper."""
     return atom_union(lambda a: [a], fm)

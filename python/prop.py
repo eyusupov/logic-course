@@ -13,6 +13,7 @@ from formulas import (
     Iff,
     Formula,
     print_qformula,
+    atoms,
 )
 
 
@@ -112,3 +113,72 @@ def print_propvar(_: int, p: P) -> str:
 
 def print_prop_formula(fm: Formula[P]) -> None:
     print_qformula(print_propvar, fm)
+
+
+# ------------------------------------------------------------------------- #
+# Generates all possible truth combinations for a list of atoms             #
+# ------------------------------------------------------------------------- #
+def onallvaluations(
+    subfn: Callable[[Callable[[T], bool]], bool], v: Callable[[T], bool], ats: list[T]
+) -> bool:
+    """
+    Recursively tests all combinations of variable truth assignments.
+    OCaml: let rec onallvaluations subfn v ats = ...
+    """
+    match ats:
+        case []:
+            return subfn(v)
+        case [p, *ps]:
+            # Create updated valuations v' for True and False cases
+            # if q == p then t else v(q)
+            def v_prime(t: bool):
+                return lambda q: t if q == p else v(q)
+
+            # The OCaml code uses '&' which forces evaluation of both branches
+            left = onallvaluations(subfn, v_prime(False), ps)
+            right = onallvaluations(subfn, v_prime(True), ps)
+            return left and right
+        case _:
+            return False
+
+
+# ------------------------------------------------------------------------- #
+# Top-level Truth Table Printer Interface                                    #
+# ------------------------------------------------------------------------- #
+def print_truthtable(fm: Formula[P]) -> None:
+    """
+    Computes and formats a clean textual truth table for a formula.
+    """
+    # 1. Gather all unique atoms using your previously translated function
+    ats: list[P] = atoms(fm)
+
+    # 2. Determine column formatting width
+    # In OCaml: width = itlist (max ** String.length ** pname) ats 5 + 1
+    # We find the max name length among atoms, fallback to 5, and add 1
+    max_atom_len = max([len(a.name) for a in ats]) if ats else 0
+    width = max(max_atom_len, 5) + 1
+
+    # Text alignments helpers using Python's native string format padding
+    def truthstring(p: bool) -> str:
+        s = "true" if p else "false"
+        return f"{s:<{width}}"  # Left-align with dynamic spaces
+
+    # 3. Create the printer callback for individual rows
+    def mk_row(v: Callable[[P], bool]) -> bool:
+        # Map values across atoms and format them
+        lis = "".join(truthstring(v(x)) for x in ats)
+        ans = truthstring(eval_formula(fm, v))
+        print(f"{lis}| {ans}")
+        return True
+
+    # 4. Construct Header Interface
+    header_atoms = "".join(f"{x.name:<{width}}" for x in ats)
+    print(f"{header_atoms}| formula")
+
+    separator = "-" * (width * len(ats) + 9)
+    print(separator)
+
+    # 5. Populate rows using a dummy fallback base valuation lambda x: False
+    onallvaluations(mk_row, lambda x: False, ats)
+
+    print(separator)

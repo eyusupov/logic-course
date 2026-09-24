@@ -1,5 +1,11 @@
 from formulas import lex, atoms
-from prop import parse_prop_formula, print_prop_formula, P, eval_formula
+from prop import (
+    parse_prop_formula,
+    print_prop_formula,
+    P,
+    eval_formula,
+    print_truthtable,
+)
 
 
 # A valid propositional syntax string
@@ -23,3 +29,6 @@ print(f"5. Eval result:      {eval_}")
 
 atoms_ = atoms(parsed_ast)
 print(f"6. Atoms:            {atoms_}")
+
+print("7. Truth table:")
+print_truthtable(parsed_ast)
