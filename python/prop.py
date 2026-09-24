@@ -184,5 +184,13 @@ def print_truthtable(fm: Formula[P]) -> None:
     print(separator)
 
 
-def tautology(fm: Formula[P]):
+def tautology(fm: Formula[P]) -> bool:
     return onallvaluations(lambda v: eval_formula(fm, v), lambda x: False, atoms(fm))
+
+
+def unsatisfiable(fm: Formula[P]) -> bool:
+    return tautology(Not(fm))
+
+
+def satisfiable(fm: Formula[P]) -> bool:
+    return not (unsatisfiable(fm))
