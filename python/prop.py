@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from typing import Callable, Any, Union
-from syntax import (
+from formulas import (
     parse_formula,
     T,
     _True,

@@ -1,5 +1,5 @@
+from formulas import lex, atoms
 from prop import parse_prop_formula, print_prop_formula, P, eval_formula
-from syntax import lex
 
 
 # A valid propositional syntax string
