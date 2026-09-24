@@ -119,7 +119,7 @@ def print_prop_formula(fm: Formula[P]) -> None:
 # Generates all possible truth combinations for a list of atoms             #
 # ------------------------------------------------------------------------- #
 def onallvaluations(
-    subfn: Callable[[Callable[[T], bool]], bool], v: Callable[[T], bool], ats: list[T]
+    subfn: Callable[[Callable[[P], bool]], bool], v: Callable[[P], bool], ats: list[P]
 ) -> bool:
     """
     Recursively tests all combinations of variable truth assignments.
@@ -182,3 +182,7 @@ def print_truthtable(fm: Formula[P]) -> None:
     onallvaluations(mk_row, lambda x: False, ats)
 
     print(separator)
+
+
+def tautology(fm: Formula[P]):
+    return onallvaluations(lambda v: eval_formula(fm, v), lambda x: False, atoms(fm))
