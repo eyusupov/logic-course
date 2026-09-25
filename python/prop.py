@@ -179,13 +179,13 @@ def print_truthtable(fm: Formula[P]) -> None:
     print(separator)
 
     # 5. Populate rows using a dummy fallback base valuation lambda x: False
-    onallvaluations(mk_row, lambda x: False, ats)
+    onallvaluations(mk_row, lambda _: False, ats)
 
     print(separator)
 
 
 def tautology(fm: Formula[P]) -> bool:
-    return onallvaluations(lambda v: eval_formula(fm, v), lambda x: False, atoms(fm))
+    return onallvaluations(lambda v: eval_formula(fm, v), lambda _: False, atoms(fm))
 
 
 def unsatisfiable(fm: Formula[P]) -> bool:
