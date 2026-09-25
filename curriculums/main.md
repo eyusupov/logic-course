@@ -79,7 +79,7 @@ Core Objective: Expand your logic language to capture variables and infinity qua
 ## 🔹 Week 8: Unification and Automated Resolution Engines
 
 - Required Reading:
-  - [HAR] Chapter 3.9 (Unification) & Chapter 3.11 (Resolution).
+  - [HAR] Chapter 3.9 (Unification), Chapter 3.11 (Resolution), Chapter 3.13: Refinements of Resolution
 - Core Concepts: Robinson’s syntactic Unification Algorithm for matching literals; The First-Order Resolution Principle; Creating mechanical proofs by refutation/contradiction.
 - Historical Blueprint: J. A. Robinson (1963/1965).
 
