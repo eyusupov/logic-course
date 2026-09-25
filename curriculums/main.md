@@ -44,7 +44,7 @@ Core Objective: Master the absolute abstraction wall between syntax and semantic
 
 - Required Reading:
   - [END] Chapter 1.7 (Compactness and Effectiveness).
-  - [HAR] Chapter 2.9 (The Davis–Putnam procedure) & Chapter 2.12 (Compactness).
+  - [HAR] Chapter 2.9 (The Davis–Putnam procedure), Section 2.10 (Stålmarck’s method), Section 2.11 (Binary decision diagrams), Chapter 2.12 (Compactness).
 - Core Concepts: The DPLL Algorithm loop architecture; Clause manipulation and search-tree branch trimming; The Mathematical Compactness Theorem for propositional variables.
 - Historical Blueprint: Davis & Putnam (1960).
 
