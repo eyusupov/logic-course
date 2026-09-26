@@ -103,56 +103,51 @@ Core Objective: Dive directly into the historic limits of mathematical certainty
 - Core Concepts: Turning logic syntax into numerical equations via Gödel Numbering; The Diagonal Lemma (Self-reference step); Proving Gödel's First and Second Incompleteness Theorems; Checking Tarski's Indefinability of Truth.
 - Historical Blueprint: Kurt Gödel (1931) and Tarski (1936).
 
-## 🔹 Week 11: The Theory of Computation (Recursive Functions & Lambda Calculus)
+## 🔹 Week 11: The Theory of Computation (The Untyped Engine)
 
 - Required Reading:
-  - [END] Chapter 3.6 (Recursive Functions).
+- [END] Chapter 3.6 (Recursive Functions).
   - [SØR] Chapters 1 & 2 (Untyped λ-calculus & Substitution).
   - [HAR] Chapter 7.6 (Church’s theorem).
-  - [TAPL] Chapters 5, 6 & 7 (Untyped λ-calculus)
-- Core Concepts: Unpacking the Chomsky Hierarchy Type 0 boundaries; Proving the Church-Turing Thesis; Computation modeled as functional substitution via β-reduction; Coding recursion loops with the Y Combinator.
-- Historical Blueprint: Alan Turing (1937) and Alonzo Church (1932).
+  - [TAPL] Chapters 5, 6, & 7 (Untyped Lambda-Calculus, An OCaml Type-free Implementation).
+- Core Concepts: Proving the Church-Turing Thesis; Functional computation via β-reduction; Managing variable scopes using De Bruijn indices; Writing a raw, untyped term evaluator in OCaml.
 
-## 🔹 Week 12: Second-Order Structural Bridges (The Curry-Howard Isomorphism)
+## 🔹 Week 12: The Propositional Isomorphism (STLC)
 
 - Required Reading:
-  - [END] Chapter 4.1 (Second-Order Languages) & Chapter 4.2 (Skolem Functions).
-  - [SØR] Chapters 3 & 4 (Simply Typed λ-calculus & The Curry-Howard Isomorphism).
-  - [TAPL] Chapters 8, 9 & 11 (Simply Typed λ-Calculus, type safety proofs (Progress and Preservation), and basic types)
-- Core Concepts: Intuitionistic Logic rules; Rejecting the law of the excluded middle; Bridging proof systems directly to program structures: Propositions-as-Types and Proofs-as-Programs.
+- [SØR] Chapters 3 & 4 (Simply Typed λ-calculus & The Curry-Howard Isomorphism).
+  - [TAPL] Chapters 8, 9, & 11 (Type Systems, Simply Typed Lambda-Calculus, Simple Extensions).
+- Core Concepts: Intuitionistic Propositional Logic vs. Classical Logic; Proving Type Safety via Progress (a well-typed term never gets stuck) and Preservation (evaluation preserves types); Unifying logical deduction steps with language type-checking.
+
+## 🔹 Week 13: Higher-Order Systems & Substructural Resource Logic
+
+- Required Reading:
+- [SØR] Chapter 5 (The Polymorphic λ-calculus / System F).
+  - [END] Chapter 4.1 & 4.2 (Second-Order Languages).
+  - [ATTAPL] Chapter 1 (Substructural Type Systems).
+- Core Concepts: Quantifying over type variables (∀ T) in System F vs. quantifying over properties (∀ P) in classical model universes; Parametric polymorphism; Linear and Affine Logic (rejecting structural rules of Weakening and Contraction to force resources to be used exactly once).
 
 ---
 
-## 📅 PHASE 4: SMT Engines, Dependent Types, and Applied Logic Systems (Weeks 13–16)
-
-Core Objective: Map everything you have learned to enterprise computational tools—deconstructing background SMT math theories, dependent-type verifiers, and massive database logicians.
-
-## 🔹 Week 13: Decidable Algebraic Theories (Inside Z3 Solver)
+## 📅 PHASE 4: SMT Engines, Dependent Types, and Applied Data Logics (Weeks 14–16)## 🔹 Week 14: Decidable Algebraic Theories & Type Inference (Inside Z3 Solver)
 
 - Required Reading:
-  - [HAR] Chapter 4.4 (Congruence closure) & Chapter 5.6 to 5.9 (Quantifier elimination, Presburger arithmetic, Real numbers).
-- Core Concepts: Engineering background mathematical theories; Congruence Closure for equality processing; Quantifier Elimination algorithms for parsing arithmetic bounds automatically.
-- Historical Blueprint: Rooted in Tarski's (1948) positive geometric decision algorithms.
+- [HAR] Chapter 4.4 (Congruence closure) & Chapter 5.6 to 5.9 (Quantifier elimination, Presburger arithmetic).
+  - [TAPL] Chapter 22 (Type Reconstruction).
+  - [ATTAPL] Chapter 10 (The Essence of ML Type Inference).
+- Core Concepts: Background mathematical decision theories; Constraint-based Hindley-Milner type inference; Realizing that compiler type reconstruction is a modified variation of logical unification.
 
-## 🔹 Week 14: Dependent Type Systems (Inside Lean and Agda)
-
-- Required Reading:
-  - [SØR] Chapter 8 (The Barendregt Cube) & Chapter 11 (Dependent Types).
-  - [ATTAPL] Chapter 2 (Dependent Types)
-- Core Concepts: Calculus of Inductive Constructions; Engineering type parameters dependent directly on localized values; Creating the architecture of a Trusted Kernel for interactive proof assistants.
-
-## 🔹 Week 15: Restricting Logic for Software & Storage Databases
+## 🔹 Week 15: Dependent Type Systems & Proof-Carrying Code (Inside Lean and Agda)
 
 - Required Reading:
-  - [HAR] Chapter 3.14 (Horn clauses and Prolog).
-  - [LLY] Chapters 1 & 2 (Syntax and Semantics of Logic Programs).
-  - [ULL (Vol. 1)] Chapter 3 (Data Models: Relational Algebra and Relational Calculus).
-- Core Concepts: Constraining open First-Order evaluation into strict Horn Clauses; Discovering that Relational Database Queries are structurally identical to First-Order Logic validation formulas.
-- Historical Blueprint: Robert Kowalski and Maarten van Emden.
+- [SØR] Chapter 8 (The Barendregt Cube) & Chapter 11 (Dependent Types).
+  - [ATTAPL] Chapter 4 (Proof-Carrying Code).
+- Core Concepts: Calculus of Inductive Constructions; Engineering type parameters dependent directly on localized values; Creating the architecture of a Trusted Kernel; Validating mobile, untrusted executable binaries using attached mathematical proof terms.
 
-## 🔹 Week 16: The Logic Programming and Datalog Execution Loop
+## 🔹 Week 16: The Database Crunch (Horn Clauses, Logic Programming, and Datalog)
 
 - Required Reading:
-  - [LLY] Chapter 3 (SLD-Resolution and Logic Programming).
-  - [ULL (Vol. 2)] Chapter 12 (Logic as a Query Language) & Chapter 13 (Efficient Evaluation of Monotone Rules).
-- Core Concepts: SLD-Resolution mechanics; Processing Datalog rules at massive enterprise data scales; The Magic Sets compilation transformation; Watching the mathematical loop close: Logic explicitly executing as data storage optimization.
+- [HAR] Chapter 3.14 (Horn clauses and Prolog).
+  - [LLY] Chapters 1, 2, & 3 (Syntax, Semantics, and SLD-Resolution of Logic Programs).
+  - [ULL] Vol. 1 Ch. 3 (Relational Calculus) & Vol. 2 Ch. 12 & 13 (Datalog Evaluation & Monotone Rules).
+- Core Concepts: Constraining First-Order Logic into linear Horn structures; Backward-chaining SLD-Resolution vs. Forward-chaining Datalog evaluation; Evaluating recursive queries using the Knaster-Tarski Least Fixed-Point (LFP) theorem on data lattices.
