@@ -106,7 +106,7 @@ Core Objective: Dive directly into the historic limits of mathematical certainty
 ## 🔹 Week 11: The Theory of Computation (The Untyped Engine)
 
 - Required Reading:
-- [END] Chapter 3.6 (Recursive Functions).
+  - [END] Chapter 3.6 (Recursive Functions).
   - [SØR] Chapters 1 & 2 (Untyped λ-calculus & Substitution).
   - [HAR] Chapter 7.6 (Church’s theorem).
   - [TAPL] Chapters 5, 6, & 7 (Untyped Lambda-Calculus, An OCaml Type-free Implementation).
@@ -115,24 +115,26 @@ Core Objective: Dive directly into the historic limits of mathematical certainty
 ## 🔹 Week 12: The Propositional Isomorphism (STLC)
 
 - Required Reading:
-- [SØR] Chapters 3 & 4 (Simply Typed λ-calculus & The Curry-Howard Isomorphism).
+  - [SØR] Chapters 3 & 4 (Simply Typed λ-calculus & The Curry-Howard Isomorphism).
   - [TAPL] Chapters 8, 9, & 11 (Type Systems, Simply Typed Lambda-Calculus, Simple Extensions).
 - Core Concepts: Intuitionistic Propositional Logic vs. Classical Logic; Proving Type Safety via Progress (a well-typed term never gets stuck) and Preservation (evaluation preserves types); Unifying logical deduction steps with language type-checking.
 
 ## 🔹 Week 13: Higher-Order Systems & Substructural Resource Logic
 
 - Required Reading:
-- [SØR] Chapter 5 (The Polymorphic λ-calculus / System F).
+  - [SØR] Chapter 5 (The Polymorphic λ-calculus / System F).
   - [END] Chapter 4.1 & 4.2 (Second-Order Languages).
   - [ATTAPL] Chapter 1 (Substructural Type Systems).
 - Core Concepts: Quantifying over type variables (∀ T) in System F vs. quantifying over properties (∀ P) in classical model universes; Parametric polymorphism; Linear and Affine Logic (rejecting structural rules of Weakening and Contraction to force resources to be used exactly once).
 
 ---
 
-## 📅 PHASE 4: SMT Engines, Dependent Types, and Applied Data Logics (Weeks 14–16)## 🔹 Week 14: Decidable Algebraic Theories & Type Inference (Inside Z3 Solver)
+## 📅 PHASE 4: SMT Engines, Dependent Types, and Applied Data Logics (Weeks 14–16)
+
+## 🔹 Week 14: Decidable Algebraic Theories & Type Inference (Inside Z3 Solver)
 
 - Required Reading:
-- [HAR] Chapter 4.4 (Congruence closure) & Chapter 5.6 to 5.9 (Quantifier elimination, Presburger arithmetic).
+  - [HAR] Chapter 4.4 (Congruence closure) & Chapter 5.6 to 5.9 (Quantifier elimination, Presburger arithmetic).
   - [TAPL] Chapter 22 (Type Reconstruction).
   - [ATTAPL] Chapter 10 (The Essence of ML Type Inference).
 - Core Concepts: Background mathematical decision theories; Constraint-based Hindley-Milner type inference; Realizing that compiler type reconstruction is a modified variation of logical unification.
@@ -140,14 +142,14 @@ Core Objective: Dive directly into the historic limits of mathematical certainty
 ## 🔹 Week 15: Dependent Type Systems & Proof-Carrying Code (Inside Lean and Agda)
 
 - Required Reading:
-- [SØR] Chapter 8 (The Barendregt Cube) & Chapter 11 (Dependent Types).
+  - [SØR] Chapter 8 (The Barendregt Cube) & Chapter 11 (Dependent Types).
   - [ATTAPL] Chapter 4 (Proof-Carrying Code).
 - Core Concepts: Calculus of Inductive Constructions; Engineering type parameters dependent directly on localized values; Creating the architecture of a Trusted Kernel; Validating mobile, untrusted executable binaries using attached mathematical proof terms.
 
 ## 🔹 Week 16: The Database Crunch (Horn Clauses, Logic Programming, and Datalog)
 
 - Required Reading:
-- [HAR] Chapter 3.14 (Horn clauses and Prolog).
+  - [HAR] Chapter 3.14 (Horn clauses and Prolog).
   - [LLY] Chapters 1, 2, & 3 (Syntax, Semantics, and SLD-Resolution of Logic Programs).
   - [ULL] Vol. 1 Ch. 3 (Relational Calculus) & Vol. 2 Ch. 12 & 13 (Datalog Evaluation & Monotone Rules).
 - Core Concepts: Constraining First-Order Logic into linear Horn structures; Backward-chaining SLD-Resolution vs. Forward-chaining Datalog evaluation; Evaluating recursive queries using the Knaster-Tarski Least Fixed-Point (LFP) theorem on data lattices.
