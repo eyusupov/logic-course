@@ -1,66 +1,87 @@
-# Chapter 0
+# Enderton
 
-set - множество
-implication - импликация
-converse implication - обратная импликация
-denial - отрицание
-principle of extensionality - принцип экстенсиональности
-power set - множество всех подмножеств (степенное множество)
-disjoint - непересекающиеся
-union - объединение (множеств)
-intersection - пересечение (множеств)
-triple - тройка
-proper segment - собственный сегмент
-relation - отношение
-ordering relation - отношение порядка
-restriction - , сужение, ограничение
-single-valued - однозначный
-composition - композиция, суперпозиция
-maps - отображает
-one-to-one - взаимно однозначный, инъективный (биективный)
-domain - область определения
-range - область значений
-n-ary - n-арный
-closed under - замкнуто относительно/по
-identity function - тождественная функция (отображение)
-equivalence relation - отношение эквивалентности
-finite - конечное
-countable - счётное
-well-defined map — корректно определенное отображение (однозначно определенное отображение).
-partial ordering - частичный порядок
-chain - цепь
-equinumerous - равномощный
-dominated - мажорируется
+## Chapter 0
 
-# Section 1.0
+- set - множество
+- implication - импликация
+- converse implication - обратная импликация
+- denial - отрицание
+- principle of extensionality - принцип экстенсиональности
+- power set - множество всех подмножеств (степенное множество)
+- disjoint - непересекающиеся
+- union - объединение (множеств)
+- intersection - пересечение (множеств)
+- triple - тройка
+- proper segment - собственный сегмент
+- relation - отношение
+- ordering relation - отношение порядка
+- restriction - , сужение, ограничение
+- single-valued - однозначный
+- composition - композиция, суперпозиция
+- maps - отображает
+- one-to-one - взаимно однозначный, инъективный (биективный)
+- domain - область определения
+- range - область значений
+- n-ary - n-арный
+- closed under - замкнуто относительно/по
+- identity function - тождественная функция (отображение)
+- equivalence relation - отношение эквивалентности
+- finite - конечное
+- countable - счётное
+- well-defined map — корректно определенное отображение (однозначно определенное отображение).
+- partial ordering - частичный порядок
+- chain - цепь
+- equinumerous - равномощный
+- dominated - мажорируется
 
-well-formed formula, wff - правильно построенная формула, ППФ
-rules for forming - правила построения
-blank - пробел
-sentence symbols - пропозициональные переменные (или символы высказываний).
+## Section 1.0
 
-# Section 1.1
+- well-formed formula, wff - правильно построенная формула, ППФ
+- rules for forming - правила построения
+- blank - пробел
+- sentence symbols - пропозициональные переменные (или символы высказываний).
 
-sentence - высказывание
-sentential logic - логика высказываний (пропозициональная логика)
-sentential connective — пропозициональная связка (логическая связка, например: конъюнкция, дизъюнкция)
-sentence symbol - пропозициональные переменные (символы высказываний)
-conditional symbol - символ импликации
-biconditional symbol - символ эквивалентности
-formula building operation - операция построения формулы
-construction sequence - последовательность построения (вывод формулы, конструктивная последовательность)
-ordinary strong numerical induction — обычная сильная числовая индукция
+## Section 1.1
 
-# Section 1.2
+- sentence - высказывание
+- sentential logic - логика высказываний (пропозициональная логика)
+- sentential connective — пропозициональная связка (логическая связка, например: конъюнкция, дизъюнкция)
+- sentence symbol - пропозициональные переменные (символы высказываний)
+- conditional symbol - символ импликации
+- biconditional symbol - символ эквивалентности
+- formula building operation - операция построения формулы
+- construction sequence - последовательность построения (вывод формулы, конструктивная последовательность)
+- ordinary strong numerical induction — обычная сильная числовая индукция
+- strong induction - возвратная индукция (полная математическая индукция)
 
-truth assignment - оценка истинности (означивание)
-truth values - истинностные (логические) значения
-extension - продолжение
-truth assignment extension - продолжение оценки истинности (продолжение означивания)
-satisfy - удовлетворять
-vacously true - тривиально верно
-hypotheses - посылки (гипотезы)
-conclusion - заключение
-tautologically implies - тавтологически следует (логически следует)
-tautologically equivalent - логически эквивалентные (равносильные, тавтологически эквивалентные
-compactness theorem - теорема о компактности (теоремa Мальцева)
+## Section 1.2
+
+- truth assignment - оценка истинности (означивание)
+- truth values - истинностные (логические) значения
+- extension - продолжение
+- truth assignment extension - продолжение оценки истинности (продолжение означивания)
+- satisfy - удовлетворять
+- vacously true - тривиально верно
+- hypotheses - посылки (гипотезы)
+- conclusion - заключение
+- tautologically implies - тавтологически влечёт (логически влечёт)
+- tautologically equivalent - логически эквивалентные (равносильные, тавтологически эквивалентные
+- compactness theorem - теорема о компактности (теоремa Мальцева)
+
+# Harrison
+
+## Chapter 2.3
+
+- logically valid - логически общезначимая (тавтология)
+- valuation = truth assignment
+- satisfiable (formula) - выполнимая (формула)
+- unsatisfiable - невыполнимая
+- contradiction — противоречие
+
+## Chapter 2.5
+
+- subsumption - поглощение (субсумция)
+
+## Chapter 2.7
+
+- complete induction = strong induction
