@@ -23,6 +23,7 @@ Core Objective: Master the absolute abstraction wall between syntax and semantic
   - [HAR] Chapter 1.5 (Syntax and semantics) & Chapter 1.6 (Symbolic computation and OCaml).
 - Core Concepts: Inductive generation definitions of formulas; Object-language alphabet variables (пропозициональные буквы) versus meta-variables (метапеременные); Constructing logic grammar in memory using functional variants.
 - Historical Blueprint: Structural foundation cleaning of Hermann Grassmann (1861).
+- Lecture: [Lecture 2: A formal definition of the language of propositional logic](https://www.youtube.com/watch?v=4qilWJz_D-M)
 
 ## 🔹 Week 2: Semantics and Truth Foundations
 
@@ -31,6 +32,7 @@ Core Objective: Master the absolute abstraction wall between syntax and semantic
   - [HAR] Chapter 2.1 to 2.3 (Syntax/Semantics of propositional logic, Validity, satisfiability, tautology).
 - Core Concepts: Truth assignment functions (истинностное означивание); The Principle of Structural Induction; Proving meta-theorems about valuations recursively; Mathematical definitions of validity, satisfiability, and tautology (тождественно истинные формулы).
 - Historical Blueprint: Early algebraic foundations of Boolean functions and the semantic truth models of Alfred Tarski.
+- Lecture: [DM-17-Propositional Logic — Validity, Satisfiability, Logical Implication, Inference System](https://www.youtube.com/watch?v=q6GR31lR1PM)
 
 ## 🔹 Week 3: Parsing Engines and Normal Forms
 
@@ -39,6 +41,7 @@ Core Objective: Master the absolute abstraction wall between syntax and semantic
   - [HAR] Chapter 1.7 (Parsing) & Chapter 2.5, 2.6 (NNF, DNF, CNF).
 - Core Concepts: Deterministic tree-structure construction; Mathematical proofs of Unique Readability; Designing an LL(1) recursive descent parser in code; Converting parsed abstract syntax trees into Negation Normal Form (NNF) and Conjunctive Normal Form (CNF).
 - Historical Blueprint: The formalization of Context-Free Grammars (Chomsky Type 2) and their reduction to algorithmic compiler tokenizers.
+- Lecture: [Propositional Logic: Normal Forms — CNF, DNF (Part 5)](https://www.youtube.com/watch?v=sNmmTcU46No)
 
 ## 🔹 Week 4: The Core SAT Solver (DPLL) & Compactness
 
@@ -47,6 +50,7 @@ Core Objective: Master the absolute abstraction wall between syntax and semantic
   - [HAR] Chapter 2.9 (The Davis–Putnam procedure), Section 2.10 (Stålmarck’s method), Section 2.11 (Binary decision diagrams), Chapter 2.12 (Compactness).
 - Core Concepts: The DPLL Algorithm loop architecture; Clause manipulation and search-tree branch trimming; The Mathematical Compactness Theorem for propositional variables.
 - Historical Blueprint: Davis & Putnam (1960).
+- Lecture: [Lecture 4A: DPLL & Modern SAT Solvers](https://www.youtube.com/watch?v=ki7rzvonbOs)
 
 ---
 
@@ -61,12 +65,14 @@ Core Objective: Expand your logic language to capture variables and infinity qua
   - [HAR] Chapter 3.1 to 3.3 (First-order logic implementation, Parsing, Semantics).
 - Core Concepts: Tarski’s formal definition of Satisfaction and structures; Domains of discourse; Valuations of relations, constants, and function functions.
 - Historical Blueprint: Richard Dedekind (1888), Giuseppe Peano (1889), and Tarski (1926-1928).
+- Lecture: [Lecture 14-2: Understanding First-Order Logic Semantics](https://www.youtube.com/watch?v=m7WLPDr2q4A)
 
 ## 🔹 Week 6: Proof Calculi, Soundness, and Completeness
 
 - Required Reading:
   - [END] Chapter 2.4 (A Deductive Calculus) & Chapter 2.5 (Soundness and Completeness Theorems).
 - Core Concepts: Structural Proof Theory baselines; Syntactic deduction paths without semantic evaluation; Soundness rules vs. Completeness limits.
+- Lecture: [Lecture 15-1: Formal Proofs for First-Order Logic](https://www.youtube.com/watch?v=VpMlxdRJmg0)
 
 ## 🔹 Week 7: Skolemization, Relativistic Models, and Herbrand's Theorem
 
@@ -75,6 +81,7 @@ Core Objective: Expand your logic language to capture variables and infinity qua
   - [HAR] Chapter 3.5 (Prenex normal form), Chapter 3.6 (Skolemization), & Chapter 3.8 (Mechanizing Herbrand’s theorem).
 - Core Concepts: The Löwenheim-Skolem Theorem and Skolem's Paradox; Non-standard models of arithmetic; Stripping existential variables using Skolem Functions; Flattening First-Order Logic into propositional instances.
 - Historical Blueprint: Löwenheim (1915), Thoralf Skolem (1920/1922), and Jacques Herbrand (1930).
+- Lecture: [Logic and Proof, Lecture 7: Skolemisation](https://www.youtube.com/watch?v=bdmigQsf_uY)
 
 ## 🔹 Week 8: Unification and Automated Resolution Engines
 
@@ -82,6 +89,7 @@ Core Objective: Expand your logic language to capture variables and infinity qua
   - [HAR] Chapter 3.9 (Unification), Chapter 3.11 (Resolution), Chapter 3.13: Refinements of Resolution
 - Core Concepts: Robinson’s syntactic Unification Algorithm for matching literals; The First-Order Resolution Principle; Creating mechanical proofs by refutation/contradiction.
 - Historical Blueprint: J. A. Robinson (1963/1965).
+- Lecture: [Lecture 17-1: Why We Need Unification for First-Order Logic?](https://www.youtube.com/watch?v=OEV_fJ-IaRI)
 
 ---
 
@@ -94,6 +102,7 @@ Core Objective: Dive directly into the historic limits of mathematical certainty
 - Required Reading:
   - [END] Chapter 3.0 (Number Theory), Chapter 3.1 (Natural Numbers with Successor), & Chapter 3.3 (A Subtheory of Number Theory).
 - Core Concepts: Robinson Arithmetic and Peano Arithmetic structural frameworks; How defining basic number systems exposes structural gaps wide enough to hold entire computational machine rules.
+- Lecture: [Fundamentals of Mathematics — Lecture 15: Dedekind-Peano vs. Peano Arithmetic](https://www.youtube.com/watch?v=d0biOTldnVA)
 
 ## 🔹 Week 10: Gödel Numbering and Incompleteness
 
@@ -102,6 +111,7 @@ Core Objective: Dive directly into the historic limits of mathematical certainty
   - [HAR] Chapter 7.1 to 7.4 (Hilbert’s programme, Tarski’s undecidability, Incompleteness, Gödel).
 - Core Concepts: Turning logic syntax into numerical equations via Gödel Numbering; The Diagonal Lemma (Self-reference step); Proving Gödel's First and Second Incompleteness Theorems; Checking Tarski's Indefinability of Truth.
 - Historical Blueprint: Kurt Gödel (1931) and Tarski (1936).
+- Lecture: [Gödel's 1st Incompleteness Theorem — Proof by Diagonalization](https://www.youtube.com/watch?v=PpSxqde0af4)
 
 ## 🔹 Week 11: The Theory of Computation (The Untyped Engine)
 
@@ -111,6 +121,7 @@ Core Objective: Dive directly into the historic limits of mathematical certainty
   - [HAR] Chapter 7.6 (Church’s theorem).
   - [TAPL] Chapters 5, 6, & 7 (Untyped Lambda-Calculus, An OCaml Type-free Implementation).
 - Core Concepts: Proving the Church-Turing Thesis; Functional computation via β-reduction; Managing variable scopes using De Bruijn indices; Writing a raw, untyped term evaluator in OCaml.
+- Lecture: [Lecture 1: Foundations of Lambda Calculus](https://www.youtube.com/watch?v=qJWqRG-hSA4)
 
 ## 🔹 Week 12: The Propositional Isomorphism (STLC)
 
@@ -118,6 +129,7 @@ Core Objective: Dive directly into the historic limits of mathematical certainty
   - [SØR] Chapters 3 & 4 (Simply Typed λ-calculus & The Curry-Howard Isomorphism).
   - [TAPL] Chapters 8, 9, & 11 (Type Systems, Simply Typed Lambda-Calculus, Simple Extensions).
 - Core Concepts: Intuitionistic Propositional Logic vs. Classical Logic; Proving Type Safety via Progress (a well-typed term never gets stuck) and Preservation (evaluation preserves types); Unifying logical deduction steps with language type-checking.
+- Lecture: [Simply-Typed Lambda Calculus, Part 3: Curry-Howard](https://www.youtube.com/watch?v=tbVB4WDBPN0)
 
 ## 🔹 Week 13: Higher-Order Systems & Substructural Resource Logic
 
@@ -126,6 +138,7 @@ Core Objective: Dive directly into the historic limits of mathematical certainty
   - [END] Chapter 4.1 & 4.2 (Second-Order Languages).
   - [ATTAPL] Chapter 1 (Substructural Type Systems).
 - Core Concepts: Quantifying over type variables (∀ T) in System F vs. quantifying over properties (∀ P) in classical model universes; Parametric polymorphism; Linear and Affine Logic (rejecting structural rules of Weakening and Contraction to force resources to be used exactly once).
+- Lecture: [The Polymorphic Lambda Calculus: System F](https://www.youtube.com/watch?v=Pl07GAw0IGg)
 
 ---
 
@@ -138,6 +151,7 @@ Core Objective: Dive directly into the historic limits of mathematical certainty
   - [TAPL] Chapter 22 (Type Reconstruction).
   - [ATTAPL] Chapter 10 (The Essence of ML Type Inference).
 - Core Concepts: Background mathematical decision theories; Constraint-based Hindley-Milner type inference; Realizing that compiler type reconstruction is a modified variation of logical unification.
+- Lecture: [Mathematical Logic, Lecture 14: Presburger Arithmetic](https://www.youtube.com/watch?v=gFYfdkQ6cr4)
 
 ## 🔹 Week 15: Dependent Type Systems & Proof-Carrying Code (Inside Lean and Agda)
 
@@ -145,6 +159,7 @@ Core Objective: Dive directly into the historic limits of mathematical certainty
   - [SØR] Chapter 8 (The Barendregt Cube) & Chapter 11 (Dependent Types).
   - [ATTAPL] Chapter 4 (Proof-Carrying Code).
 - Core Concepts: Calculus of Inductive Constructions; Engineering type parameters dependent directly on localized values; Creating the architecture of a Trusted Kernel; Validating mobile, untrusted executable binaries using attached mathematical proof terms.
+- Lecture: [A Little Taste of Dependent Types — David Christiansen](https://www.youtube.com/watch?v=VxINoKFm-S4)
 
 ## 🔹 Week 16: The Database Crunch (Horn Clauses, Logic Programming, and Datalog)
 
@@ -153,3 +168,4 @@ Core Objective: Dive directly into the historic limits of mathematical certainty
   - [LLY] Chapters 1, 2, & 3 (Syntax, Semantics, and SLD-Resolution of Logic Programs).
   - [ULL] Vol. 1 Ch. 3 (Relational Calculus) & Vol. 2 Ch. 12 & 13 (Datalog Evaluation & Monotone Rules).
 - Core Concepts: Constraining First-Order Logic into linear Horn structures; Backward-chaining SLD-Resolution vs. Forward-chaining Datalog evaluation; Evaluating recursive queries using the Knaster-Tarski Least Fixed-Point (LFP) theorem on data lattices.
+- Lecture: [KTU CS403 Programming Paradigms: Logic Programming in Prolog — Horn Clauses, Resolution, Features](https://www.youtube.com/watch?v=zQ8ME3no-Z4)
