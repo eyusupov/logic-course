@@ -1,171 +1,171 @@
-# 🏛️ Master Curriculum: Mathematical Logic, Automated Reasoning, and Type Systems
+# Master Curriculum: Mathematical Logic, Automated Reasoning, and Type Systems## Core Textbooks & System Tickers
 
-## 📦 Core Textbooks & System Tickers
-
-- [END] Herbert B. Enderton, A Mathematical Introduction to Logic (2nd Edition)
+- [LAMR] Jeremy Avigad, Marijn Heule, & Wojciech Nawrocki, Logic and Mechanized Reasoning
 - [HAR] John Harrison, Handbook of Practical Logic and Automated Reasoning
 - [SØR] Morten Heine Sørensen & Paweł Urzyczyn, Lectures on the Curry-Howard Isomorphism
 - [LLY] J. W. Lloyd, Foundations of Logic Programming
 - [ULL] Jeffrey D. Ullman, Principles of Database & Knowledge-Base Systems (Vols. 1 & 2)
 - [TAPL] Benjamin C. Pierce, Types and Programming Languages
-- [ATTAPL] Benjamin C. Pierce, Advanced Topics in Types and Programming Languages
+- [ATTAPL] Benjamin C. Pierce (Ed.), Advanced Topics in Types and Programming Languages
 
 ---
 
-## 📅 PHASE 1: Propositional Logic, Truth, and SAT (Weeks 1–4)
-
-Core Objective: Master the absolute abstraction wall between syntax and semantics, unique structural parsing, and the algorithmic blueprint of automated SAT solvers.
-
-## 🔹 Week 1: The Formalization of Syntax
+## PHASE 1: Propositional Logic, Functional Environments, and SAT (Weeks 1–4)## Week 1: Foundations, Mathematical Induction, and OCaml Core
 
 - Required Reading:
-  - [END] Chapter 1.0 (Informal Remarks on Formal Languages) & Chapter 1.1 (The Language of Sentential Logic).
+  - [LAMR] Chapter 1 (Introduction) & Chapter 2 (Mathematical Background: Sections 2.1–2.4).
   - [HAR] Chapter 1.5 (Syntax and semantics) & Chapter 1.6 (Symbolic computation and OCaml).
-- Core Concepts: Inductive generation definitions of formulas; Object-language alphabet variables (пропозициональные буквы) versus meta-variables (метапеременные); Constructing logic grammar in memory using functional variants.
-- Historical Blueprint: Structural foundation cleaning of Hermann Grassmann (1861).
-- Lecture: [Lecture 2: A formal definition of the language of propositional logic](https://www.youtube.com/watch?v=4qilWJz_D-M)
+- Core Concepts: Induction and recursion on natural numbers; Complete induction; Generalized structural induction; Program invariants; Object-language variables versus meta-variables.
+- YouTube Lecture:
+  - [Introduction to Mathematical Logic (Lecture 1) — Shai Ben-David](https://www.youtube.com/watch?v=rjV4AO0iIVY) (Covers object/meta language boundaries).
 
-## 🔹 Week 2: Semantics and Truth Foundations
-
-- Required Reading:
-  - [END] Chapter 1.2 (Truth Assignments) & Chapter 1.4 (Induction and Recursion).
-  - [HAR] Chapter 2.1 to 2.3 (Syntax/Semantics of propositional logic, Validity, satisfiability, tautology).
-- Core Concepts: Truth assignment functions (истинностное означивание); The Principle of Structural Induction; Proving meta-theorems about valuations recursively; Mathematical definitions of validity, satisfiability, and tautology (тождественно истинные формулы).
-- Historical Blueprint: Early algebraic foundations of Boolean functions and the semantic truth models of Alfred Tarski.
-- Lecture: [DM-17-Propositional Logic — Validity, Satisfiability, Logical Implication, Inference System](https://www.youtube.com/watch?v=q6GR31lR1PM)
-
-## 🔹 Week 3: Parsing Engines and Normal Forms
+## Week 2: Lean as a Programming Language & Parsing Engines
 
 - Required Reading:
-  - [END] Chapter 1.3 (A Parsing Algorithm) & Chapter 1.5 (Sentential Connectives).
-  - [HAR] Chapter 1.7 (Parsing) & Chapter 2.5, 2.6 (NNF, DNF, CNF).
-- Core Concepts: Deterministic tree-structure construction; Mathematical proofs of Unique Readability; Designing an LL(1) recursive descent parser in code; Converting parsed abstract syntax trees into Negation Normal Form (NNF) and Conjunctive Normal Form (CNF).
-- Historical Blueprint: The formalization of Context-Free Grammars (Chomsky Type 2) and their reduction to algorithmic compiler tokenizers.
-- Lecture: [Propositional Logic: Normal Forms — CNF, DNF (Part 5)](https://www.youtube.com/watch?v=sNmmTcU46No)
+  - [LAMR] Chapter 3 (Lean as a Programming Language: Sections 3.1–3.4).
+  - [HAR] Chapter 1.7 (Parsing).
+- Core Concepts: Using Lean 4 as a functional programming language; Declaring inductive data types; Using Lean 4 as an imperative programming language (monads, state mutable tracking); Writing an LL(1) Recursive Descent Parser in OCaml.
+- YouTube Lecture:
+  - [Mathematical Logic: Truth and Reasoning (Lecture 1) — Waterloo](https://www.youtube.com/watch?v=S90tAmeZv78) (Covers structural induction steps).
 
-## 🔹 Week 4: The Core SAT Solver (DPLL) & Compactness
+## Week 3: Propositional Logic Syntax, Semantics, and Implementation
 
 - Required Reading:
-  - [END] Chapter 1.7 (Compactness and Effectiveness).
-  - [HAR] Chapter 2.9 (The Davis–Putnam procedure), Section 2.10 (Stålmarck’s method), Section 2.11 (Binary decision diagrams), Chapter 2.12 (Compactness).
-- Core Concepts: The DPLL Algorithm loop architecture; Clause manipulation and search-tree branch trimming; The Mathematical Compactness Theorem for propositional variables.
-- Historical Blueprint: Davis & Putnam (1960).
-- Lecture: [Lecture 4A: DPLL & Modern SAT Solvers](https://www.youtube.com/watch?v=ki7rzvonbOs)
+  - [LAMR] Chapter 4 (Propositional Logic) & Chapter 5 (Implementing Propositional Logic).
+  - [HAR] Chapter 2.1 to 2.3 & Chapter 2.5, 2.6 (NNF, DNF, CNF).
+- Core Concepts: Propositional syntax and semantics; Calculating with propositions; Complete sets of connectives; Implementing propositional syntax/semantics trees in code; Automating Negation Normal Form (NNF), Disjunctive Normal Form (DNF), and Conjunctive Normal Form (CNF) data structures.
+- YouTube Lecture:
+  - [Pure Math Lesson 1: Statements with Words & Truth Values](https://www.youtube.com/watch?v=mspn8b31NRo) (Semantic mapping techniques).
+
+## Week 4: SAT Solvers, CDCL Mechanics, and Binary Decision Diagrams
+
+- Required Reading:
+  - [LAMR] Chapter 6 (Decision Procedures for Propositional Logic) & Chapter 7 (Using SAT Solvers).
+  - [HAR] Chapter 2.9 (The Davis–Putnam procedure), Section 2.10 (Stålmarck's Method), & Section 2.11 (Binary Decision Diagrams).
+- Core Concepts: The Tseitin Transformation; Unit propagation and the pure literal rule; The DPLL backtracking algorithm; Autarkies and 2-SAT; Conflict-Driven Clause Learning (CDCL) basics; Encoding problems (Grid coloring, NumberMind); Reduced Ordered Binary Decision Diagrams (ROBDDs).
+- YouTube Lecture:
+  - [Automated Reasoning: Satisfiability and Resolution — Hans Zantema](https://www.youtube.com/watch?v=51lkrIl0IEY) (DPLL branching analytics).
 
 ---
 
-## 📅 PHASE 2: First-Order Logic, Model Theory, and Resolution (Weeks 5–8)
-
-Core Objective: Expand your logic language to capture variables and infinity quantifiers, evaluate structural truth universes, and engineer general automated theorem proving.
-
-## 🔹 Week 5: Quantifiers, Truth, and Models
+## PHASE 2: Proof Systems, First-Order Logic, and Equality Procedures (Weeks 5–8)## Week 5: Propositional Proof Systems & Interactive Proof Assistance
 
 - Required Reading:
-  - [END] Chapter 2.0 (Preliminary Remarks), Chapter 2.1 (First-Order Languages), & Chapter 2.2 (Truth and Models).
-  - [HAR] Chapter 3.1 to 3.3 (First-order logic implementation, Parsing, Semantics).
-- Core Concepts: Tarski’s formal definition of Satisfaction and structures; Domains of discourse; Valuations of relations, constants, and function functions.
-- Historical Blueprint: Richard Dedekind (1888), Giuseppe Peano (1889), and Tarski (1926-1928).
-- Lecture: [Lecture 14-2: Understanding First-Order Logic Semantics](https://www.youtube.com/watch?v=m7WLPDr2q4A)
+  - [LAMR] Chapter 8 (Proof Systems for Propositional Logic) & Chapter 9 (Using Lean as a Proof Assistant).
+- Core Concepts: Axiomatic systems; Propositional Resolution; Implementing resolution engines; Resolution vs. DPLL; Sequent calculus; Natural deduction; Propositional Compactness; Writing structured proofs and proof terms natively inside Lean 4.
+- YouTube Lecture:
+- No video link attached. (Requires interactive local VS Code Lean environment execution).
 
-## 🔹 Week 6: Proof Calculi, Soundness, and Completeness
-
-- Required Reading:
-  - [END] Chapter 2.4 (A Deductive Calculus) & Chapter 2.5 (Soundness and Completeness Theorems).
-- Core Concepts: Structural Proof Theory baselines; Syntactic deduction paths without semantic evaluation; Soundness rules vs. Completeness limits.
-- Lecture: [Lecture 15-1: Formal Proofs for First-Order Logic](https://www.youtube.com/watch?v=VpMlxdRJmg0)
-
-## 🔹 Week 7: Skolemization, Relativistic Models, and Herbrand's Theorem
+## Week 6: First-Order Logic Syntax and Semantics
 
 - Required Reading:
-  - [END] Chapter 2.6 (Models of Theories).
-  - [HAR] Chapter 3.5 (Prenex normal form), Chapter 3.6 (Skolemization), & Chapter 3.8 (Mechanizing Herbrand’s theorem).
-- Core Concepts: The Löwenheim-Skolem Theorem and Skolem's Paradox; Non-standard models of arithmetic; Stripping existential variables using Skolem Functions; Flattening First-Order Logic into propositional instances.
-- Historical Blueprint: Löwenheim (1915), Thoralf Skolem (1920/1922), and Jacques Herbrand (1930).
-- Lecture: [Logic and Proof, Lecture 7: Skolemisation](https://www.youtube.com/watch?v=bdmigQsf_uY)
+  - [LAMR] Chapter 10 (First-Order Logic: Sections 10.1–10.4).
+  - [HAR] Chapter 3.1 to 3.3 (First-order logic syntax, semantics, and models).
+- Core Concepts: First-order language syntax; Quantified variables, predicates, and functions; Tarski's formal definition of satisfaction structures; First-order normal forms.
+- YouTube Lecture:
+  - Introduction to First-Order Language Semantics and Predicates — Waterloo (Transitioning from propositional variables to quantifiers).
 
-## 🔹 Week 8: Unification and Automated Resolution Engines
+## Week 7: Implementing First-Order Logic, Herbrand's Theorem, and Unification
 
 - Required Reading:
-  - [HAR] Chapter 3.9 (Unification), Chapter 3.11 (Resolution), Chapter 3.13: Refinements of Resolution
-- Core Concepts: Robinson’s syntactic Unification Algorithm for matching literals; The First-Order Resolution Principle; Creating mechanical proofs by refutation/contradiction.
-- Historical Blueprint: J. A. Robinson (1963/1965).
-- Lecture: [Lecture 17-1: Why We Need Unification for First-Order Logic?](https://www.youtube.com/watch?v=OEV_fJ-IaRI)
+  - [LAMR] Chapter 11 (Implementing First-Order Logic: Sections 11.1–11.4).
+  - [HAR] Chapter 3.5 (Prenex normal form), 3.6 (Skolemization), & 3.8 (Herbrand's theorem).
+- Core Concepts: Representing and evaluating terms and formulas in code; Robinson’s Syntactic Unification Algorithm; Prenex normal form transformations; Outer Skolemization; Reducing First-Order Logic to infinite propositional instances via Herbrand Terms.
+- YouTube Lecture:
+  - [Prenex Normal Form and Skolemization Logic Architecture](https://www.youtube.com/watch?v=8nGriQ81gps) (Quantifier elimination procedures).
+
+## Week 8: Decision Procedures for Equality
+
+- Required Reading:
+  - [LAMR] Chapter 12 (Decision Procedures for Equality: Sections 12.1–12.3).
+  - [HAR] Chapter 4.4 (Congruence closure).
+- Core Concepts: The logical properties of Equality; Implementing the Congruence Closure Algorithm via E-graphs/union-find data structures; Deciding universal sentences with equality.
+- YouTube Lecture:
+  - Constraint Logic, Theory Unification, and SMT Solvers (E-graph and congruence calculations).
 
 ---
 
-## 📅 PHASE 3: Computability, Type Theory, and Curry-Howard (Weeks 9–12)
-
-Core Objective: Dive directly into the historic limits of mathematical certainty, formalize computation as text translation, and crack the proof-as-program code bridge.
-
-## 🔹 Week 9: Number Systems and Mathematical Foundations
+## PHASE 3: Interactive Verification, Computability, and Type Theory (Weeks 9–13)## Week 9: Equality, Induction in Lean, and Metatheorem Foundations
 
 - Required Reading:
-  - [END] Chapter 3.0 (Number Theory), Chapter 3.1 (Natural Numbers with Successor), & Chapter 3.3 (A Subtheory of Number Theory).
-- Core Concepts: Robinson Arithmetic and Peano Arithmetic structural frameworks; How defining basic number systems exposes structural gaps wide enough to hold entire computational machine rules.
-- Lecture: [Fundamentals of Mathematics — Lecture 15: Dedekind-Peano vs. Peano Arithmetic](https://www.youtube.com/watch?v=d0biOTldnVA)
+  - [LAMR] Chapter 13 (Equality and Induction in Lean: Sections 13.1–13.2).
+  - [HAR] Chapter 7.1 (Context of Gödel's proof), 7.2 (Gödel numbering), 7.3 (Incompleteness), & 7.4 (Further meta-theorems).
+- Core Concepts: Equational reasoning tactics in Lean 4; Writing structural induction proofs inside a proof assistant; Arithmetization of syntax (Gödel numbering); The Diagonal Self-Reference Lemma; Gödel's First and Second Incompleteness Theorems.
+- YouTube Lecture:
+  - The Diagonal Lemma and Gödel Incompleteness Foundations (The boundaries of axiomatic consistency).
 
-## 🔹 Week 10: Gödel Numbering and Incompleteness
-
-- Required Reading:
-  - [END] Chapter 3.4 (Arithmetization of Syntax), Chapter 3.5 (Incompleteness and Undecidability), & Chapter 3.7 (Second Incompleteness Theorem).
-  - [HAR] Chapter 7.1 to 7.4 (Hilbert’s programme, Tarski’s undecidability, Incompleteness, Gödel).
-- Core Concepts: Turning logic syntax into numerical equations via Gödel Numbering; The Diagonal Lemma (Self-reference step); Proving Gödel's First and Second Incompleteness Theorems; Checking Tarski's Indefinability of Truth.
-- Historical Blueprint: Kurt Gödel (1931) and Tarski (1936).
-- Lecture: [Gödel's 1st Incompleteness Theorem — Proof by Diagonalization](https://www.youtube.com/watch?v=PpSxqde0af4)
-
-## 🔹 Week 11: The Theory of Computation (The Untyped Engine)
+## Week 10: Decision Procedures for Arithmetic & Undecidability Limits
 
 - Required Reading:
-  - [END] Chapter 3.6 (Recursive Functions).
-  - [SØR] Chapters 1 & 2 (Untyped λ-calculus & Substitution).
-  - [HAR] Chapter 7.6 (Church’s theorem).
+  - [LAMR] Chapter 14 (Decision Procedures for Arithmetic: Sections 14.1–14.5).
+  - [HAR] Chapter 7.5 (Solvability and undecidability) & Chapter 7.6 (Church’s theorem).
+- Core Concepts: Linear Real Arithmetic (LRA); Implementing the Fourier-Motzkin Elimination Algorithm; Linear Integer Arithmetic (LIA / Presburger arithmetic); Other decidable algebraic theories vs. the Undecidability of the Halting Problem and Church's Theorem.
+- YouTube Lecture:
+  - Axiomatic Number Systems, Peano Arithmetic, and Definability Limits (Mathematical machinery bounds).
+
+## Week 11: Satisfiability Modulo Theories (SMT) & The Untyped Engine
+
+- Required Reading:
+  - [LAMR] Chapter 15 (Using SMT Solvers: Sections 15.1–15.5).
+  - [SØR] Chapter 1 (Untyped lambda-calculus) & Chapter 2 (Substitution).
   - [TAPL] Chapters 5, 6, & 7 (Untyped Lambda-Calculus, An OCaml Type-free Implementation).
-- Core Concepts: Proving the Church-Turing Thesis; Functional computation via β-reduction; Managing variable scopes using De Bruijn indices; Writing a raw, untyped term evaluator in OCaml.
-- Lecture: [Lecture 1: Foundations of Lambda Calculus](https://www.youtube.com/watch?v=qJWqRG-hSA4)
+- Core Concepts: SMT-LIB Format standard; Encoding constraints (Magic squares, almost squares); Calling SMT solvers directly from Lean 4; Software verification applications; Functional calculation foundations via β-reduction; Managing variable scopes using De Bruijn Indices.
+- YouTube Lecture:
+- [Untyped Lambda Calculus, Terms, and Beta-Reduction Functions](https://www.youtube.com/watch?v=LkZw4xRjyDk) (Pure computation models).
 
-## 🔹 Week 12: The Propositional Isomorphism (STLC)
+## Week 12: Simply Typed Lambda Calculus (STLC) & The Curry-Howard Isomorphism
 
 - Required Reading:
-  - [SØR] Chapters 3 & 4 (Simply Typed λ-calculus & The Curry-Howard Isomorphism).
+  - [SØR] Chapter 3 (Simply typed lambda-calculus) & Chapter 4 (The Curry-Howard Isomorphism).
   - [TAPL] Chapters 8, 9, & 11 (Type Systems, Simply Typed Lambda-Calculus, Simple Extensions).
-- Core Concepts: Intuitionistic Propositional Logic vs. Classical Logic; Proving Type Safety via Progress (a well-typed term never gets stuck) and Preservation (evaluation preserves types); Unifying logical deduction steps with language type-checking.
-- Lecture: [Simply-Typed Lambda Calculus, Part 3: Curry-Howard](https://www.youtube.com/watch?v=tbVB4WDBPN0)
+- Core Concepts: Intuitionistic Propositional Logic; The Brouwer-Heyting-Kolmogorov (BHK) interpretation; Proving Type Safety via Progress and Preservation invariants; Mapping Propositions-as-Types and Proofs-as-Programs.
+- YouTube Lecture:
+  - Foundations of Programming Languages: Simply Typed Lambda Calculus (STLC) and Type Safety (OPLSS standard lecture).
 
-## 🔹 Week 13: Higher-Order Systems & Substructural Resource Logic
+## Week 13: Higher-Order Systems & Substructural Resource Tracking
 
 - Required Reading:
-  - [SØR] Chapter 5 (The Polymorphic λ-calculus / System F).
-  - [END] Chapter 4.1 & 4.2 (Second-Order Languages).
+  - [SØR] Chapter 5 (The Polymorphic lambda-calculus / System F).
   - [ATTAPL] Chapter 1 (Substructural Type Systems).
-- Core Concepts: Quantifying over type variables (∀ T) in System F vs. quantifying over properties (∀ P) in classical model universes; Parametric polymorphism; Linear and Affine Logic (rejecting structural rules of Weakening and Contraction to force resources to be used exactly once).
-- Lecture: [The Polymorphic Lambda Calculus: System F](https://www.youtube.com/watch?v=Pl07GAw0IGg)
+- Core Concepts: Quantifying over type variables (∀ T) inside System F; Parametric polymorphism; Linear Logic and Affine Logic constraints (forbidding the structural rules of Weakening and Contraction to enforce exact, single-use pointer and memory lifecycle tracking).
+- YouTube Lecture:
+  - [Polymorphic Lambda-Calculus and System F Type Quantifiers](https://www.youtube.com/watch?v=amsnnASxceU) (Higher-order variable mapping).
 
 ---
 
-## 📅 PHASE 4: SMT Engines, Dependent Types, and Applied Data Logics (Weeks 14–16)
-
-## 🔹 Week 14: Decidable Algebraic Theories & Type Inference (Inside Z3 Solver)
+## PHASE 4: Advanced Type Inference, Verification Kernels, and Enterprise Data Engines (Weeks 14–16)## Week 14: Automated Type Reconstruction & ML Inference Engines
 
 - Required Reading:
-  - [HAR] Chapter 4.4 (Congruence closure) & Chapter 5.6 to 5.9 (Quantifier elimination, Presburger arithmetic).
   - [TAPL] Chapter 22 (Type Reconstruction).
   - [ATTAPL] Chapter 10 (The Essence of ML Type Inference).
-- Core Concepts: Background mathematical decision theories; Constraint-based Hindley-Milner type inference; Realizing that compiler type reconstruction is a modified variation of logical unification.
-- Lecture: [Mathematical Logic, Lecture 14: Presburger Arithmetic](https://www.youtube.com/watch?v=gFYfdkQ6cr4)
+- Core Concepts: Constraint-based type reconstruction; Generating type variable constraints; Hindley-Milner type inference extensions; Unifying type equations via automated substitution sweeps.
+- YouTube Lecture:
+  - Automated Reasoning: Satisfiability and Resolution — Hans Zantema (The mechanical unification basis behind inference loops).
 
-## 🔹 Week 15: Dependent Type Systems & Proof-Carrying Code (Inside Lean and Agda)
+## Week 15: Dependent Types & Proof-Carrying Software Architecture
 
 - Required Reading:
   - [SØR] Chapter 8 (The Barendregt Cube) & Chapter 11 (Dependent Types).
   - [ATTAPL] Chapter 4 (Proof-Carrying Code).
-- Core Concepts: Calculus of Inductive Constructions; Engineering type parameters dependent directly on localized values; Creating the architecture of a Trusted Kernel; Validating mobile, untrusted executable binaries using attached mathematical proof terms.
-- Lecture: [A Little Taste of Dependent Types — David Christiansen](https://www.youtube.com/watch?v=VxINoKFm-S4)
+- Core Concepts: The Lambda Cube classification boundaries; Dependent Type Theory (Π-types where types depend on runtime execution values); Calculus of Inductive Constructions; Building a Trusted Kernel compilation environment; Embedding structural mathematical proof terms into untrusted executable bytecode binaries.
+- YouTube Lecture:
+  - [Lambda Cube Unboxed: Introduction to Dependent Type Systems](https://www.youtube.com/watch?v=UCzE15Hvs1E) (The foundation of interactive assistants).
 
-## 🔹 Week 16: The Database Crunch (Horn Clauses, Logic Programming, and Datalog)
+## Week 16: Horn Clauses, Logic Programming, and Recursive Datalog Engines
 
 - Required Reading:
   - [HAR] Chapter 3.14 (Horn clauses and Prolog).
   - [LLY] Chapters 1, 2, & 3 (Syntax, Semantics, and SLD-Resolution of Logic Programs).
   - [ULL] Vol. 1 Ch. 3 (Relational Calculus) & Vol. 2 Ch. 12 & 13 (Datalog Evaluation & Monotone Rules).
-- Core Concepts: Constraining First-Order Logic into linear Horn structures; Backward-chaining SLD-Resolution vs. Forward-chaining Datalog evaluation; Evaluating recursive queries using the Knaster-Tarski Least Fixed-Point (LFP) theorem on data lattices.
-- Lecture: [KTU CS403 Programming Paradigms: Logic Programming in Prolog — Horn Clauses, Resolution, Features](https://www.youtube.com/watch?v=zQ8ME3no-Z4)
+- Core Concepts: Constraining First-Order Logic into deterministic linear Horn structures; Backward-chaining SLD-Resolution execution structures vs. Forward-chaining monotone data cascades; Compiling recursive database query matrices by calculating the unique Least Fixed-Point (LFP) via the Knaster-Tarski Theorem on bounded data lattices.
+- YouTube Lecture:
+  - Logic Programming, Horn Clauses, and Datalog Tractability (The final transition of logic proofs into database queries).
+
+---
+
+## The Streamlined 16-Week Grid View
+
+[WEEK 11] [WEEK 12] [WEEK 13] [WEEK 14] [WEEK 15] [WEEK 16]
+SMT & Untyped λ Simply Typed STLC System F & LinLogic Type Inference ADTs Dependent Type CoC Prolog & Datalog
+(LAMR 15 / TAPL 5-7) (TAPL 8-11) (ATTAPL 1) (TAPL 22) (SØR 8, 11) (LLY 1-3 / ULL 12-13)
+[Vid: Lambda Calc] [Vid: OPLSS STλC] [Vid: System F] [Vid: Unification] [Vid: Lambda Cube] [Vid: Data Resolution]
