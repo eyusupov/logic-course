@@ -113,7 +113,7 @@
 
 ## PHASE 4: Advanced Type Inference, Verification Kernels, and Enterprise Data Engines (Weeks 14–16)
 
-## 🔹Week 14: SMT Engines, Theory Integration, and Type Reconstruction
+## Week 14: SMT Engines, Theory Integration, and Type Reconstruction
 
 - Required Reading:
   - [LAMR] Chapter 15 (Using SMT Solvers: Sections 15.1–15.5).
