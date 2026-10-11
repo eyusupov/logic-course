@@ -73,19 +73,19 @@
 
 ## PHASE 3: Interactive Verification, Computability, and Type Theory (Weeks 9–13)
 
-## Week 9: Equality, Induction in Lean, and Metatheorem Foundations
+## Week 9: Equality, Induction in Lean, and Incompleteness Foundations
 
 - Required Reading:
   - [LAMR] Chapter 13 (Equality and Induction in Lean: Sections 13.1–13.2).
-  - [HAR] Chapter 7.1 (Context of Gödel's proof), 7.2 (Gödel numbering), 7.3 (Incompleteness), & 7.4 (Further meta-theorems).
-- Core Concepts: Equational reasoning tactics in Lean 4; Writing structural induction proofs inside a proof assistant; Arithmetization of syntax (Gödel numbering); The Diagonal Self-Reference Lemma; Gödel's First and Second Incompleteness Theorems.
+  - [HAR] Chapter 7: Sections 7.1 (Hilbert’s programme), 7.3 (Incompleteness of axiom systems), & 7.4 (Gödel’s incompleteness theorem).
+- Core Concepts: Equational reasoning tactics in Lean 4; Writing structural induction proofs inside a proof assistant; Arithmetization of syntax; The Fixed-Point Self-Reference Diagonal Lemma; Proving Gödel's First and Second Incompleteness Theorems.
 
 ## Week 10: Decision Procedures for Arithmetic & Undecidability Limits
 
 - Required Reading:
   - [LAMR] Chapter 14 (Decision Procedures for Arithmetic: Sections 14.1–14.5).
-  - [HAR] Chapter 7.5 (Solvability and undecidability) & Chapter 7.6 (Church’s theorem).
-- Core Concepts: Linear Real Arithmetic (LRA); Implementing the Fourier-Motzkin Elimination Algorithm; Linear Integer Arithmetic (LIA / Presburger arithmetic); Other decidable algebraic theories vs. the Undecidability of the Halting Problem and Church's Theorem.
+  - [HAR] Chapter 7: Sections 7.2 (Tarski’s theorem on the undeﬁnability of truth), 7.5 (Deﬁnability and decidability), & 7.6 (Church’s theorem).
+- Core Concepts: Linear Real Arithmetic (LRA) and Fourier-Motzkin Elimination; Linear Integer Arithmetic (LIA / Presburger arithmetic); Tarski’s Indefinability of Truth; Undecidability of the Halting Problem and Church's Theorem (First-Order Logic validity is undecidable).
 
 ## Week 11: Satisfiability Modulo Theories (SMT) & The Untyped Engine
 
