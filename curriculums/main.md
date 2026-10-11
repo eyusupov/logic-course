@@ -10,7 +10,9 @@
 
 ---
 
-## PHASE 1: Propositional Logic, Functional Environments, and SAT (Weeks 1–4)## Week 1: Foundations, Mathematical Induction, and OCaml Core
+## PHASE 1: Propositional Logic, Functional Environments, and SAT (Weeks 1–4)
+
+### Week 1: Foundations, Mathematical Induction, and OCaml Core
 
 - Required Reading:
   - [LAMR] Chapter 1 (Introduction) & Chapter 2 (Mathematical Background: Sections 2.1–2.4).
@@ -31,7 +33,7 @@
   - [HAR] Chapter 2.1 to 2.3 & Chapter 2.5, 2.6 (NNF, DNF, CNF).
 - Core Concepts: Propositional syntax and semantics; Calculating with propositions; Complete sets of connectives; Implementing propositional syntax/semantics trees in code; Automating Negation Normal Form (NNF), Disjunctive Normal Form (DNF), and Conjunctive Normal Form (CNF) data structures.
 
-## Week 4: SAT Solvers, CDCL Mechanics, and Binary Decision Diagrams
+### Week 4: SAT Solvers, CDCL Mechanics, and Binary Decision Diagrams
 
 - Required Reading:
   - [LAMR] Chapter 6 (Decision Procedures for Propositional Logic) & Chapter 7 (Using SAT Solvers).
@@ -42,27 +44,27 @@
 
 ## PHASE 2: Proof Systems, First-Order Logic, and Equality Procedures (Weeks 5–8)
 
-## Week 5: Propositional Proof Systems & Interactive Proof Assistance
+### Week 5: Propositional Proof Systems & Interactive Proof Assistance
 
 - Required Reading:
   - [LAMR] Chapter 8 (Proof Systems for Propositional Logic) & Chapter 9 (Using Lean as a Proof Assistant).
 - Core Concepts: Axiomatic systems; Propositional Resolution; Implementing resolution engines; Resolution vs. DPLL; Sequent calculus; Natural deduction; Propositional Compactness; Writing structured proofs and proof terms natively inside Lean 4.
 
-## Week 6: First-Order Logic Syntax and Semantics
+### Week 6: First-Order Logic Syntax and Semantics
 
 - Required Reading:
   - [LAMR] Chapter 10 (First-Order Logic: Sections 10.1–10.4).
   - [HAR] Chapter 3.1 to 3.3 (First-order logic syntax, semantics, and models) & Section 3.7 (Canonical models).
 - Core Concepts: First-order language syntax; Quantified variables, predicates, and functions; Tarski's formal definition of satisfaction structures; First-order normal forms; Kurt Gödel's First-Order Completeness Theorem proved via Henkin's canonical model construction directly out of syntax terms.
 
-## Week 7: Implementing First-Order Logic, Herbrand's Theorem, and Unification
+### Week 7: Implementing First-Order Logic, Herbrand's Theorem, and Unification
 
 - Required Reading:
   - [LAMR] Chapter 11 (Implementing First-Order Logic: Sections 11.1–11.4).
   - [HAR] Chapter 3.5 (Prenex normal form), 3.6 (Skolemization), 3.8 (Herbrand's theorem) & Section 3.10 (Tableaux).
 - Core Concepts: Representing and evaluating terms and formulas in code; Robinson’s Syntactic Unification Algorithm; Prenex normal form transformations; Outer Skolemization; Reducing First-Order Logic to infinite propositional instances via Herbrand Terms.
 
-## Week 8: Unification, First-Order Resolution, and Limit Theorems
+### Week 8: Unification, First-Order Resolution, and Limit Theorems
 
 - Required Reading:
   - [LAMR] Chapter 12 (Decision Procedures for Equality: Sections 12.1–12.3).
@@ -73,21 +75,21 @@
 
 ## PHASE 3: Interactive Verification, Computability, and Type Theory (Weeks 9–13)
 
-## Week 9: Equality, Induction in Lean, and Incompleteness Foundations
+### Week 9: Equality, Induction in Lean, and Incompleteness Foundations
 
 - Required Reading:
   - [LAMR] Chapter 13 (Equality and Induction in Lean: Sections 13.1–13.2).
   - [HAR] Chapter 7: Sections 7.1 (Hilbert’s programme), 7.3 (Incompleteness of axiom systems), & 7.4 (Gödel’s incompleteness theorem).
 - Core Concepts: Equational reasoning tactics in Lean 4; Writing structural induction proofs inside a proof assistant; Arithmetization of syntax; The Fixed-Point Self-Reference Diagonal Lemma; Proving Gödel's First and Second Incompleteness Theorems.
 
-## Week 10: Decision Procedures for Arithmetic & Undecidability Limits
+### Week 10: Decision Procedures for Arithmetic & Undecidability Limits
 
 - Required Reading:
   - [LAMR] Chapter 14 (Decision Procedures for Arithmetic: Sections 14.1–14.5).
   - [HAR] Chapter 7: Sections 7.2 (Tarski’s theorem on the undeﬁnability of truth), 7.5 (Deﬁnability and decidability), & 7.6 (Church’s theorem).
 - Core Concepts: Linear Real Arithmetic (LRA) and Fourier-Motzkin Elimination; Linear Integer Arithmetic (LIA / Presburger arithmetic); Tarski’s Indefinability of Truth; Undecidability of the Halting Problem and Church's Theorem (First-Order Logic validity is undecidable).
 
-## Week 11: Satisfiability Modulo Theories (SMT) & The Untyped Engine
+### Week 11: Satisfiability Modulo Theories (SMT) & The Untyped Engine
 
 - Required Reading:
   - [LAMR] Chapter 15 (Using SMT Solvers: Sections 15.1–15.5).
@@ -95,14 +97,14 @@
   - [TAPL] Chapters 5, 6, & 7 (Untyped Lambda-Calculus, An OCaml Type-free Implementation).
 - Core Concepts: SMT-LIB Format standard; Encoding constraints (Magic squares, almost squares); Calling SMT solvers directly from Lean 4; Software verification applications; Functional calculation foundations via β-reduction; Managing variable scopes using De Bruijn Indices.
 
-## Week 12: Simply Typed Lambda Calculus (STLC) & The Curry-Howard Isomorphism
+### Week 12: Simply Typed Lambda Calculus (STLC) & The Curry-Howard Isomorphism
 
 - Required Reading:
   - [SØR] Chapter 3 (Simply typed lambda-calculus) & Chapter 4 (The Curry-Howard Isomorphism).
   - [TAPL] Chapters 8, 9, & 11 (Type Systems, Simply Typed Lambda-Calculus, Simple Extensions).
 - Core Concepts: Intuitionistic Propositional Logic; The Brouwer-Heyting-Kolmogorov (BHK) interpretation; Proving Type Safety via Progress and Preservation invariants; Mapping Propositions-as-Types and Proofs-as-Programs.
 
-## Week 13: Higher-Order Systems & Substructural Resource Tracking
+### Week 13: Higher-Order Systems & Substructural Resource Tracking
 
 - Required Reading:
   - [SØR] Chapter 5 (The Polymorphic lambda-calculus / System F).
@@ -113,7 +115,7 @@
 
 ## PHASE 4: Advanced Type Inference, Verification Kernels, and Enterprise Data Engines (Weeks 14–16)
 
-## Week 14: SMT Engines, Theory Integration, and Type Reconstruction
+### Week 14: SMT Engines, Theory Integration, and Type Reconstruction
 
 - Required Reading:
   - [LAMR] Chapter 15 (Using SMT Solvers: Sections 15.1–15.5).
@@ -121,14 +123,14 @@
   - [ATTAPL] Chapter 10 (The Essence of ML Type Inference).
 - Core Concepts: SMT-LIB Format standard; Calling SMT solvers directly from Lean 4 for software verification; Constraint-based type reconstruction; Hindley-Milner type inference extensions; Realizing that compiler type reconstruction is a specialized constraint unification solver.
 
-## Week 15: Dependent Types & Proof-Carrying Software Architecture
+### Week 15: Dependent Types & Proof-Carrying Software Architecture
 
 - Required Reading:
   - [SØR] Chapter 8 (The Barendregt Cube) & Chapter 11 (Dependent Types).
   - [ATTAPL] Chapter 4 (Proof-Carrying Code).
 - Core Concepts: The Lambda Cube classification boundaries; Dependent Type Theory (Π-types where types depend on runtime execution values); Calculus of Inductive Constructions; Building a Trusted Kernel compilation environment; Embedding structural mathematical proof terms into untrusted executable bytecode binaries.
 
-## Week 16: Horn Clauses, Logic Programming, and Recursive Datalog Engines
+### Week 16: Horn Clauses, Logic Programming, and Recursive Datalog Engines
 
 - Required Reading:
   - [HAR] Chapter 3.14 (Horn clauses and Prolog).
