@@ -52,26 +52,28 @@
 
 - Required Reading:
   - [LAMR] Chapter 10 (First-Order Logic: Sections 10.1–10.4).
-  - [HAR] Chapter 3.1 to 3.3 (First-order logic syntax, semantics, and models).
-- Core Concepts: First-order language syntax; Quantified variables, predicates, and functions; Tarski's formal definition of satisfaction structures; First-order normal forms.
+  - [HAR] Chapter 3.1 to 3.3 (First-order logic syntax, semantics, and models) & Section 3.7 (Canonical models).
+- Core Concepts: First-order language syntax; Quantified variables, predicates, and functions; Tarski's formal definition of satisfaction structures; First-order normal forms; Kurt Gödel's First-Order Completeness Theorem proved via Henkin's canonical model construction directly out of syntax terms.
 
 ## Week 7: Implementing First-Order Logic, Herbrand's Theorem, and Unification
 
 - Required Reading:
   - [LAMR] Chapter 11 (Implementing First-Order Logic: Sections 11.1–11.4).
-  - [HAR] Chapter 3.5 (Prenex normal form), 3.6 (Skolemization), & 3.8 (Herbrand's theorem).
+  - [HAR] Chapter 3.5 (Prenex normal form), 3.6 (Skolemization), 3.8 (Herbrand's theorem) & Section 3.10 (Tableaux).
 - Core Concepts: Representing and evaluating terms and formulas in code; Robinson’s Syntactic Unification Algorithm; Prenex normal form transformations; Outer Skolemization; Reducing First-Order Logic to infinite propositional instances via Herbrand Terms.
 
-## Week 8: Decision Procedures for Equality
+## Week 8: Unification, First-Order Resolution, and Limit Theorems
 
 - Required Reading:
   - [LAMR] Chapter 12 (Decision Procedures for Equality: Sections 12.1–12.3).
-  - [HAR] Chapter 4.4 (Congruence closure).
-- Core Concepts: The logical properties of Equality; Implementing the Congruence Closure Algorithm via E-graphs/union-find data structures; Deciding universal sentences with equality.
+  - [HAR] Chapter 3.9 (Unification) & Section 4.4 (Congruence closure).
+- Core Concepts: Robinson’s Syntactic Unification Algorithm; The logical properties of Equality (reflexivity, symmetry, transitivity, congruence); Implementing the Congruence Closure Algorithm via E-graphs and union-find pointer structures; Deciding universal sentences with equality.
 
 ---
 
-## PHASE 3: Interactive Verification, Computability, and Type Theory (Weeks 9–13)## Week 9: Equality, Induction in Lean, and Metatheorem Foundations
+## PHASE 3: Interactive Verification, Computability, and Type Theory (Weeks 9–13)
+
+## Week 9: Equality, Induction in Lean, and Metatheorem Foundations
 
 - Required Reading:
   - [LAMR] Chapter 13 (Equality and Induction in Lean: Sections 13.1–13.2).
@@ -109,12 +111,15 @@
 
 ---
 
-## PHASE 4: Advanced Type Inference, Verification Kernels, and Enterprise Data Engines (Weeks 14–16)## Week 14: Automated Type Reconstruction & ML Inference Engines
+## PHASE 4: Advanced Type Inference, Verification Kernels, and Enterprise Data Engines (Weeks 14–16)
+
+## 🔹Week 14: SMT Engines, Theory Integration, and Type Reconstruction
 
 - Required Reading:
+  - [LAMR] Chapter 15 (Using SMT Solvers: Sections 15.1–15.5).
   - [TAPL] Chapter 22 (Type Reconstruction).
   - [ATTAPL] Chapter 10 (The Essence of ML Type Inference).
-- Core Concepts: Constraint-based type reconstruction; Generating type variable constraints; Hindley-Milner type inference extensions; Unifying type equations via automated substitution sweeps.
+- Core Concepts: SMT-LIB Format standard; Calling SMT solvers directly from Lean 4 for software verification; Constraint-based type reconstruction; Hindley-Milner type inference extensions; Realizing that compiler type reconstruction is a specialized constraint unification solver.
 
 ## Week 15: Dependent Types & Proof-Carrying Software Architecture
 
