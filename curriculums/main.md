@@ -19,14 +19,14 @@
   - [HAR] Chapter 1.5 (Syntax and semantics) & Chapter 1.6 (Symbolic computation and OCaml).
 - Core Concepts: Induction and recursion on natural numbers; Complete induction; Generalized structural induction; Program invariants; Object-language variables versus meta-variables.
 
-## Week 2: Lean as a Programming Language & Parsing Engines
+### Week 2: Lean as a Programming Language & Parsing Engines
 
 - Required Reading:
   - [LAMR] Chapter 3 (Lean as a Programming Language: Sections 3.1–3.4).
   - [HAR] Chapter 1.7 (Parsing).
 - Core Concepts: Using Lean 4 as a functional programming language; Declaring inductive data types; Using Lean 4 as an imperative programming language (monads, state mutable tracking); Writing an LL(1) Recursive Descent Parser in OCaml.
 
-## Week 3: Propositional Logic Syntax, Semantics, and Implementation
+### Week 3: Propositional Logic Syntax, Semantics, and Implementation
 
 - Required Reading:
   - [LAMR] Chapter 4 (Propositional Logic) & Chapter 5 (Implementing Propositional Logic).
@@ -137,12 +137,3 @@
   - [LLY] Chapters 1, 2, & 3 (Syntax, Semantics, and SLD-Resolution of Logic Programs).
   - [ULL] Vol. 1 Ch. 3 (Relational Calculus) & Vol. 2 Ch. 12 & 13 (Datalog Evaluation & Monotone Rules).
 - Core Concepts: Constraining First-Order Logic into deterministic linear Horn structures; Backward-chaining SLD-Resolution execution structures vs. Forward-chaining monotone data cascades; Compiling recursive database query matrices by calculating the unique Least Fixed-Point (LFP) via the Knaster-Tarski Theorem on bounded data lattices.
-
----
-
-## The Streamlined 16-Week Grid View
-
-[WEEK 11] [WEEK 12] [WEEK 13] [WEEK 14] [WEEK 15] [WEEK 16]
-SMT & Untyped λ Simply Typed STLC System F & LinLogic Type Inference ADTs Dependent Type CoC Prolog & Datalog
-(LAMR 15 / TAPL 5-7) (TAPL 8-11) (ATTAPL 1) (TAPL 22) (SØR 8, 11) (LLY 1-3 / ULL 12-13)
-[Vid: Lambda Calc] [Vid: OPLSS STλC] [Vid: System F] [Vid: Unification] [Vid: Lambda Cube] [Vid: Data Resolution]
